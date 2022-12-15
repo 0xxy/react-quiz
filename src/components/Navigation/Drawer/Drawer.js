@@ -21,8 +21,8 @@ class Drawer extends React.Component {
         <li key={index}>
           <NavLink
             to={link.to}
-            exact={link.exact}
-            activeClassName={classes.active}
+            exact={`${link.exact}`}
+            className={(navData) => (navData.isActive ? classes.active : 'none')}
             onClick={this.clickHandler}
             >{link.label}
           </NavLink>
